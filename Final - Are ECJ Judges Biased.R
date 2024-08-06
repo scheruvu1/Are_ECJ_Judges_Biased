@@ -1,6 +1,7 @@
 library(tidyverse)
 library(fixest)
 library(haven)
+library(modelsummary)
 
 ####loading data
 load("positions.RData")
