@@ -369,12 +369,12 @@ dict = c("CJEU_for_applicant" = "CJEU for Applicant", "jr_for_applicant" = "JR f
 
 ####Table 3###
 etable(mod_1_cg,mod_2_cg,mod_3_cg,mod_4_cg,mod_5_cg,mod_6_cg,
-       dict = dict, style.tex = style.tex("aer"), 
+       dict = dict, style.tex = style.tex("aer"), digits = 2,
        fitstat = ~ r2 + n, tex = T)
 
 ####Table 4####
 etable(mod_1,mod_2,mod_3,mod_4,mod_5,mod_6,
-       dict = dict, style.tex = style.tex("aer"), 
+       dict = dict, style.tex = style.tex("aer"), digits = 2,
        fitstat = ~ r2 + n, tex = T)
 
 ####Logit Robustness####
@@ -455,11 +455,11 @@ mod_6_logit <- feglm(CJEU_all_for_applicant ~ jr_all_for_applicant + jr_not_appl
                      cluster =~ iuropa_proceeding_id, family = "binomial", data = dat)
 
 etable(mod_1_cg_logit,mod_2_cg_logit,mod_3_cg_logit,mod_4_cg_logit,mod_5_cg_logit,mod_6_cg_logit,
-       dict = dict, style.tex = style.tex("aer"), 
+       dict = dict, style.tex = style.tex("aer"), digits = 2,
        fitstat = ~ pr2 + n, tex = T)
 
 etable(mod_1_logit,mod_2_logit,mod_3_logit,mod_4_logit,mod_5_logit,mod_6_logit,
-       dict = dict, style.tex = style.tex("aer"), 
+       dict = dict, style.tex = style.tex("aer"), digits = 2,
        fitstat = ~ pr2 + n, tex = T)
 
 ####Descriptive Statistics Tables####
